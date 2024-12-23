@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap'); /* Импорт шрифта Nanum Brush Script */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e5e5e5;
+    background-image: url('background_site.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Nanum Brush Script', cursive;
+    white-space: nowrap;
+    padding: 0 15px;
+}
+
+.intro {
+    margin-top: 100px;
+    padding: 20px;
+    height: 1024px; /* Высота раздела 1024px */
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 505px;
+    height: 505px;
+}
+
+.text-with-background {
+    position: relative;
+    display: inline-block;
+    padding: 5px 15px;
+    color: rgb(0, 0, 0);
+}
+
+.text-with-background::before {
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 25px;
+    width: 783px;
+    height: 75px;
+    background-image: url('under_name.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+h1 {
+    /* Sofya Dovgopolova */
+    font-size: 100px; 
+    color: black;
+    font-family: 'Pho Tai', sans-serif;
+}
+
+h2 {
+    /* graphic designer */
+    font-size: 60px; 
+    color: white; 
+    font-family: 'Pho Tai', sans-serif;
+}
+
+/* About me & My skills */
+.about-skills {
+    margin-left: 120px;
+    padding: 50px 20px;
+    /*background-color: #e0e0e0;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    height: 1024px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 80px; 
+    margin-bottom: 20px;
+    color: black; 
+}
+
+.about-text {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-text p {
+    font-size: 50px; 
+    font-family: 'Nanum Brush Script', cursive; 
+    color: white; 
+}
+
+.skills {
+    width: 40%;
+}
+
+.skills h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.skills p {
+    font-size: 50px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: white;
+}
+
+.skills img {
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+.about-image {
+    width: 30%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.design, .modeling, .contact {
+    padding: 50px 20px;
+    /*background-color: #e0e0e0;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 1024px;
+}
+
+.design h2, .modeling h2, .contact h2 {
+    margin-left: 120px;
+    text-align: left;
+    font-size: 80px; 
+    margin-bottom: 20px;
+    color: black;
+    z-index: 1;
+}
+
+.contact p {
+    margin-top: 25px;
+    margin-left: 180px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 80px;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.contact p a{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 80px;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.contact img {
+    width: 112px;
+    height: 112px;
+    vertical-align: middle;
+    margin-right: 10px;
+}

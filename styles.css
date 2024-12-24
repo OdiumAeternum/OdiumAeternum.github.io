@@ -1,27 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap'); /* Импорт шрифта Nanum Brush Script */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 
-* {
+.page {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
     background-color: #e5e5e5;
     background-image: url('background_site.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-attachment: fixed;*/
     width: 100%;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
-header {
+.header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     position: fixed;
@@ -30,23 +23,26 @@ header {
     z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+.header__nav {
     max-width: 1200px;
     min-width: 800px;
     margin: 0 auto;
     width: 100%;
 }
 
-nav ul li {
+.header__menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.header__menu-item {
     display: inline-block;
     margin: 0;
 }
 
-nav ul li a {
+.header__menu-link {
     color: white;
     text-decoration: none;
     font-size: 50px;
@@ -58,24 +54,40 @@ nav ul li a {
 .intro {
     margin-top: 100px;
     padding: 20px;
-    height: 1024px; /* Высота раздела 1024px */
+    height: 1024px;
 }
 
-.profile-pic img {
+.intro__title {
+    margin-bottom: 40px;
+    font-size: 100px; 
+    color: black;
+    font-family: 'Pho Tai', sans-serif;
+}
+
+.intro__subtitle {
+    font-size: 60px; 
+    color: white; 
+    font-family: 'Pho Tai', sans-serif;
+}
+
+.intro__profile-pic {
     margin-top: 50px;
+}
+
+.intro__profile-pic-img {
     border-radius: 50%;
     width: 505px;
     height: 505px;
 }
 
-.text-with-background {
+.intro__title--with-background {
     position: relative;
     display: inline-block;
     padding: 5px 15px;
     color: rgb(0, 0, 0);
 }
 
-.text-with-background::before {
+.intro__title--with-background::before {
     content: '';
     position: absolute;
     top: 25px;
@@ -88,94 +100,67 @@ nav ul li a {
     z-index: -1;
 }
 
-h1 {
-    /* Sofya Dovgopolova */
-    margin-bottom: 40px;
-    font-size: 100px; 
-    color: black;
-    font-family: 'Pho Tai', sans-serif;
-}
-
-h2 {
-    /* graphic designer */
-    font-size: 60px; 
-    color: white; 
-    font-family: 'Pho Tai', sans-serif;
-}
-
-/* About me & My skills */
 .about-skills {
     margin-left: 120px;
     padding: 50px 20px;
-    /*background-color: #e0e0e0;*/
     margin-bottom: 20px;
     border-radius: 10px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
     height: 1024px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.about-text h2 {
+.about-skills__text {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-skills__title {
     font-size: 80px; 
     margin-bottom: 20px;
     color: black; 
 }
 
-.about-text {
-
-    width: 50%;
-    padding-right: 20px;
-}
-
-.about-text p {
+.about-skills__description {
     font-size: 50px; 
     font-family: 'Nanum Brush Script', cursive; 
     color: white; 
 }
 
-.skills {
-    width: 40%;
-}
-
-.skills h2 {
-    font-size: 80px;
-    margin-bottom: 50px;
-    color: black;
-}
-
-.skills p {
+.about-skills__skills {
     font-size: 50px;
     font-family: 'Nanum Brush Script', cursive;
     color: white;
 }
 
-.skills img {
+.about-skills__icons {
     max-width: 80%;
     margin-top: 20px;
 }
 
-.about-image {
+.about-skills__image {
     width: 30%;
 }
 
-.about-image img {
+.about-skills__image-img {
     width: 100%;
     height: auto;
     border-radius: 0;
 }
 
-.design, .modeling, .contact {
+.design,
+.modeling,
+.contact {
     padding: 50px 20px;
-    /*background-color: #e0e0e0;*/
     margin-bottom: 20px;
     border-radius: 10px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
     height: 1024px;
 }
 
-.design h2, .modeling h2, .contact h2 {
+.design__title,
+.modeling__title,
+.contact__title {
     margin-left: 120px;
     text-align: left;
     font-size: 80px; 
@@ -184,7 +169,9 @@ h2 {
     z-index: 1;
 }
 
-.design h2, .modeling h2, .contact h2::before {
+.design__title::before,
+.modeling__title::before,
+.contact__title::before {
     content: '';
     position: absolute;
     background-image: url('under_h.png');
@@ -193,7 +180,7 @@ h2 {
     z-index: -1;
 }
 
-.contact p {
+.contact__item {
     margin-top: 25px;
     margin-left: 180px;
     text-align: left;
@@ -203,7 +190,7 @@ h2 {
     font-family: 'Nanum Brush Script', cursive;
 }
 
-.contact p a{
+.contact__link {
     margin-top: 10px;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -211,53 +198,49 @@ h2 {
     font-family: 'Nanum Brush Script', cursive;
 }
 
-.contact img {
+.contact__icon {
     width: 112px;
     height: 112px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
-
-#back-to-top {
-    position: fixed;
-    left: 45px;
-    bottom: 45px;
-}
-
-#back-to-top {
+.back-to-top {
     position: fixed;
     left: 45px;
     bottom: 45px;
     transition: transform 2s;
 }
 
-.rotating {
+.back-to-top--rotating {
     transform: rotate(360deg);
 }
 
-
-.swiper{
+.design__slider {
     width: 50%;
     height: 80%;
     margin-top: 100px;
-  }
-  .swiper-slide{
+}
+
+.design__slide {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .swiper-slide img{
+}
+
+.design__slide-img {
     width: 58%;
     object-fit: cover;
-  }
-  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+}
+
+.design__slider-button--next {
     right: 400px !important; 
     left: auto;
     color: black;
-  }
-  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+}
+
+.design__slider-button--prev {
     left: 400px !important; 
     right: auto;
     color: black;
-  }
+}

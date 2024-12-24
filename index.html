@@ -9,49 +9,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link type="image/x-icon" href="favicon.png" rel="shortcut icon">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about-skills">About me</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#3d">3D-modeling</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body class="page">
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#about-skills" class="header__menu-link">About me</a></li>
+                <li class="header__menu-item"><a href="#design" class="header__menu-link">Design</a></li>
+                <li class="header__menu-item"><a href="#3d" class="header__menu-link">3D-modeling</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="intro">
-        <h1 class="text-with-background">Sofya Dovgopolova</h1>
-        <h2>- graphic designer</h2>
-        <div class="profile-pic">
-            <img src="profile.png" alt="Profile Picture">
+        <h1 class="intro__title text-with-background">Sofya Dovgopolova</h1>
+        <h2 class="intro__subtitle">- graphic designer</h2>
+        <div class="intro__profile-pic">
+            <img src="profile.png" alt="Profile Picture" class="intro__profile-img">
         </div>
     </section>
 
     <section id="about-skills" class="about-skills">
-        <div class="about-text">
-            <h2>About me</h2>
-            <p>Hi! I'm Sonya, a second-year student of Information Technology in Design, Herzen University.</p>
-            <p>How can I help you? Here are some of my works. If you like my style, feel free to contact me. Enjoy!</p>
-            <h2>My skills</h2>
-            <p>Design: <img src="design_icons.png" alt="Design icons"></p>
-            <p>3D and Engines: <img src="3d_eng_icons.png" alt="3D icons"></p>
+        <div class="about-skills__text">
+            <h2 class="about-skills__title">About me</h2>
+            <p class="about-skills__description">Hi! I'm Sonya, a second-year student of Information Technology in Design, Herzen University.</p>
+            <p class="about-skills__description">How can I help you? Here are some of my works. If you like my style, feel free to contact me. Enjoy!</p>
+            <h2 class="about-skills__title">My skills</h2>
+            <p class="about-skills__skills">Design: <img src="design_icons.png" alt="Design icons" class="about-skills__icons"></p>
+            <p class="about-skills__skills">3D and Engines: <img src="3d_eng_icons.png" alt="3D icons" class="about-skills__icons"></p>
         </div>
-        <div class="about-image">
-            <img src="MAR_4336 1.png" alt="About me image">
+        <div class="about-skills__image">
+            <img src="MAR_4336 1.png" alt="About me image" class="about-skills__img">
         </div>
     </section>
 
     <section id="design" class="design">
-        <h2>Design</h2>
-        <div class="swiper mySwiper">
+        <h2 class="design__title">Design</h2>
+        <div class="design__slider swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="static.png"></div>
-              <div class="swiper-slide"><img src="dynamic.png"></div>
-              <div class="swiper-slide"><img src="metallica.png"></div>
-              <div class="swiper-slide"><img src="memento.png"></div>
-              <div class="swiper-slide"><img src="mac.png"></div>
+              <div class="swiper-slide"><img src="static.png" class="design__slide-img"></div>
+              <div class="swiper-slide"><img src="dynamic.png" class="design__slide-img"></div>
+              <div class="swiper-slide"><img src="metallica.png" class="design__slide-img"></div>
+              <div class="swiper-slide"><img src="memento.png" class="design__slide-img"></div>
+              <div class="swiper-slide"><img src="mac.png" class="design__slide-img"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -60,22 +60,22 @@
     </section>
 
     <section id="3d" class="modeling">
-        <h2>3D-modeling</h2>
-        <img src="3d_end_icons.png" alt="3D work">
+        <h2 class="modeling__title">3D-modeling</h2>
+        <img src="3d_end_icons.png" alt="3D work" class="modeling__img">
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p><img src="telegram.png" alt="Telegram"> @owl_sonya</p>
-        <p><img src="vk.png" alt="VK"> @tim3vort3x</p>
-        <p><img src="mail.png" alt="Email"><a href="mailto:mail@htmlacademy.ru"> sofserdov@yandex.ru</a></p>
-        <p><img src="telephone.png" alt="Telephone"><a href="tel:+79021382589">+7-902-138-25-89</a></p>
+        <h2 class="contact__title">Contact</h2>
+        <p class="contact__item"><img src="telegram.png" alt="Telegram" class="contact__icon"> @owl_sonya</p>
+        <p class="contact__item"><img src="vk.png" alt="VK" class="contact__icon"> @tim3vort3x</p>
+        <p class="contact__item"><img src="mail.png" alt="Email" class="contact__icon"><a href="mailto:mail@htmlacademy.ru" class="contact__link"> sofserdov@yandex.ru</a></p>
+        <p class="contact__item"><img src="telephone.png" alt="Telephone" class="contact__icon"><a href="tel:+79021382589" class="contact__link">+7-902-138-25-89</a></p>
     </section>
+
+    <div id="back-to-top" class="back-to-top"><img src="up.png" width="95px" height="83px" class="back-to-top__img" /></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
-         
-    <div id="back-to-top"><img src="up.png" width="95px" height="83px" /></div>
 </body>
 </html>

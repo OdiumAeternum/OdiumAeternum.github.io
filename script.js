@@ -8,14 +8,15 @@ $(function() {
     });
     
     $('#back-to-top').click(function() {
-        $(this).addClass('rotate');
+        $(this).addClass('rotating');
         $('body,html').animate({scrollTop:0}, 700);
         
         setTimeout(() => {
-            $(this).removeClass('rotate');
+            $(this).removeClass('rotating');
         }, 2000);
     });
 });
+
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,

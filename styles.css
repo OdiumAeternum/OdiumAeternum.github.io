@@ -225,22 +225,21 @@ h2 {
     bottom: 45px;
 }
 
-.rotate {
-    animation: rotate 2s;
+#back-to-top {
+    position: fixed;
+    left: 45px;
+    bottom: 45px;
+    transition: transform 2s;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.rotating {
+    transform: rotate(360deg);
 }
+
 
 .swiper{
     width: 50%;
-    height: 60%;
+    height: 80%;
     margin-top: 100px;
   }
   .swiper-slide{
@@ -253,16 +252,12 @@ h2 {
     object-fit: cover;
   }
   .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    right: 140px !important; 
+    right: 400px !important; 
     left: auto;
-    width: 100px;
-    height: 100px;
     color: black;
   }
   .swiper-button-prev, .swiper-rtl .swiper-button-next{
-    left: 140px !important; 
+    left: 400px !important; 
     right: auto;
-    width: 100px;
-    height: 100px;
     color: black;
   }

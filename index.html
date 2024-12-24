@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Sofya Dovgopolova</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link type="image/x-icon" href="favicon.png" rel="shortcut icon">
 </head>
 <body>
@@ -43,7 +45,18 @@
 
     <section id="design" class="design">
         <h2>Design</h2>
-        <img src="design.png" alt="Design work">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="static.png"></div>
+              <div class="swiper-slide"><img src="dynamic.png"></div>
+              <div class="swiper-slide"><img src="metallica.png"></div>
+              <div class="swiper-slide"><img src="memento.png"></div>
+              <div class="swiper-slide"><img src="mac.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </section>
 
     <section id="3d" class="modeling">
@@ -58,5 +71,11 @@
         <p><img src="mail.png" alt="Email"><a href="mailto:mail@htmlacademy.ru"> sofserdov@yandex.ru</a></p>
         <p><img src="telephone.png" alt="Telephone"><a href="tel:+79021382589">+7-902-138-25-89</a></p>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+         
+    <div id="back-to-top"><img src="up.png" width="95px" height="83px" /></div>
 </body>
 </html>

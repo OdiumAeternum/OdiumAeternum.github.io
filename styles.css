@@ -58,10 +58,26 @@
 }
 
 .intro__title {
+    position: relative;
+    display: inline-block;
     margin-bottom: 40px;
     font-size: 100px; 
     color: black;
     font-family: 'Pho Tai', sans-serif;
+    padding: 5px 15px;
+}
+
+.intro__title::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 783px;
+    height: 75px;
+    background-image: url('under_name.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .intro__subtitle {
@@ -80,26 +96,6 @@
     height: 505px;
 }
 
-.intro__title--with-background {
-    position: relative;
-    display: inline-block;
-    padding: 5px 15px;
-    color: rgb(0, 0, 0);
-}
-
-.intro__title--with-background::before {
-    content: '';
-    position: absolute;
-    top: 25px;
-    left: 30px;
-    width: 783px;
-    height: 75px;
-    background-image: url('under_name.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
 .about-skills {
     margin-left: 120px;
     padding: 50px 20px;
@@ -108,11 +104,11 @@
     height: 1024px; 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .about-skills__text {
-    width: 50%;
+    width: 60%;
     padding-right: 20px;
 }
 
@@ -120,6 +116,7 @@
     font-size: 80px; 
     margin-bottom: 20px;
     color: black; 
+    font-family: 'Pho Tai', sans-serif;
 }
 
 .about-skills__description {
@@ -140,11 +137,14 @@
 }
 
 .about-skills__image {
-    width: 30%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .about-skills__image-img {
     width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 0;
 }
@@ -167,6 +167,7 @@
     margin-bottom: 20px;
     color: black;
     z-index: 1;
+    font-family: 'Pho Tai', sans-serif;
 }
 
 .design__title::before,
@@ -216,10 +217,16 @@
     transform: rotate(360deg);
 }
 
-.design__slider {
+.design__slider-container {
+    position: relative;
     width: 50%;
     height: 80%;
-    margin-top: 100px;
+    margin: 100px auto 0;
+}
+
+.design__slider {
+    width: 100%;
+    height: 100%;
 }
 
 .design__slide {
@@ -233,14 +240,30 @@
     object-fit: cover;
 }
 
-.design__slider-button--next {
-    right: 400px !important; 
-    left: auto;
-    color: black;
+.design__slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .design__slider-button--prev {
-    left: 400px !important; 
-    right: auto;
-    color: black;
+    left: -60px;
+    background-image: url('left_button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.design__slider-button--next {
+    right: -60px;
+    background-image: url('right_button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
